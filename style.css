@@ -1,0 +1,1262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Fundo escuro para dar aquele toque "modo noturno" */
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Seção de introdução, com animação aplicada */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: linear-gradient(135deg, #ffcc00, #ff6600); /* Gradiente amarelo alaranjado */
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.intro-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideUp 1.5s ease-out;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    animation: slideUp 2s ease-out;
+}
+
+.highlight {
+    color: #ffcc00; /* Destaque amarelo */
+    font-weight: bold;
+}
+
+/* Seção de "Principais Atrativos", sem animação agora */
+.home {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.carousel-item p {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #f5f5f5;
+    margin-top: 50px;
+}
+
+/* Animações para a introdução e animações para o slide-up */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+
+    .intro {
+        height: 300px;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+/* Seção de principais atrativos */
+.home {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features {
+    margin-top: 30px;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Animação de aumento */
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px); /* Dá um efeito de elevação */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra para dar profundidade */
+}
+
+.carousel-item p {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+}
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #222; /* Alterei para um tom mais escuro para contraste */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ffcc00; /* Borda amarela para um toque chamativo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombras para profundidade */
+}
+
+.navbar a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordas arredondadas para um toque moderno */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover nas abas */
+.navbar a:hover {
+    color: #fff;
+    background-color: #ff6600; /* Cor laranja suave para hover */
+    transform: scale(1.05); /* Leve aumento da aba ao passar o mouse */
+}
+
+/* Abas ativas */
+.navbar a.active {
+    background-color: #ffcc00; /* Amarelo para indicar aba ativa */
+    color: #333;
+    font-weight: bold; /* Negrito para dar mais ênfase na aba ativa */
+}
+
+/* Seção de introdução */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animações para introdução */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+
+
+
+
+/* ABA RAÇAS!!!! ACIMA ESTA O INDEX E ABAIXO AS RAÇAS
+
+
+
+
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo com fundo animado em gradiente */
+body {
+    background: linear-gradient(45deg, #1c1c1c, #333);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animação do fundo de gradiente */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Barra de navegação com efeito de sombra luminosa */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 100;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Raças container com animação emergente */
+.raças-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 80px 20px 40px;
+    justify-items: center;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: emerge 1s ease-out forwards;
+}
+
+/* Animação de emergência do container */
+@keyframes emerge {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito de brilho sutil nas raças */
+.raça {
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+    padding: 20px;
+    background: #444;
+}
+
+/* Efeito de hover mais sutil */
+.raça:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Sombra mais suave */
+    background-color: #555;
+    filter: brightness(1.1);
+    animation: pulse-shadow 2s infinite alternate;
+}
+
+/* Animação de sombra pulsante, mas com brilho mais leve */
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 6px 20px rgba(255, 204, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 6px 30px rgba(255, 204, 0, 0.5);
+    }
+}
+
+/* Efeito de iluminação com sombras mais suaves */
+.raça::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(255, 204, 0, 0.05); /* Mais sutil */
+    z-index: -1;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.3); /* Menos brilho */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.raça:hover::before {
+    opacity: 1;
+}
+
+/* Imagens das raças com borda suavizada e efeito 3D */
+.raça img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito de zoom e brilho nas imagens */
+.raça img:hover {
+    transform: scale(1.05); /* Zoom mais sutil */
+    filter: brightness(1.2); /* Brilho mais leve */
+}
+
+/* Nome das raças com efeito de glow suave */
+.raça p {
+    font-size: 22px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Efeito de glow sutil no texto */
+.raça p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffcc00;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.raça:hover p {
+    color: #ffdd33;
+    transform: scale(1.05); /* Aumento mais leve */
+    text-shadow: 0 0 8px #ffcc00, 0 0 12px #ffcc00; /* Glow mais suave */
+}
+
+.raça:hover p::after {
+    opacity: 1;
+}
+
+/* Rodapé com iluminação suave */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+footer p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animações de entrada para os elementos */
+.raça {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Efeito de luz pulsante mais suave */
+@keyframes pulse-light {
+    0% {
+        filter: brightness(1.05);
+    }
+    100% {
+        filter: brightness(1.2);
+    }
+}
+
+body {
+    animation: pulse-light 3s infinite alternate;
+}
+
+
+
+
+
+/* A PARTIR DAQUI É A ABA MAPA E ACIMA DAQUI É A ABA RAÇAS!!!
+
+
+
+
+/* Container do Mapa */
+.map-page .map-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto; /* Centralizando o conteúdo */
+    border: 3px solid #444;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Primeira imagem do mapa */
+.map-page .map-image {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente com base na largura */
+    object-fit: cover; /* Ajusta a imagem sem distorcer, mantendo o foco */
+    border-radius: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin-bottom: 20px; /* Distância entre a imagem e o conteúdo abaixo */
+}
+
+/* Efeito de hover para a imagem */
+.map-page .map-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Descrição dos Locais */
+.map-page .map-description {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    color: #f7d117;
+}
+
+.map-page .map-description h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.map-page .map-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.map-page .map-description li {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #444;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.map-page .map-description li:hover {
+    background-color: #555;
+}
+
+.map-page .map-description h3 {
+    font-size: 22px;
+    color: #f7d117;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.map-page .local-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.map-page .local-image:hover {
+    transform: scale(1.05);
+}
+
+.map-page .map-description p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Estilo para a div contendo título e subtítulo */
+.title-container {
+    text-align: center; /* Alinha todo o conteúdo ao centro */
+    padding: 40px 20px; /* Espaçamento confortável dentro da div */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro suave */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra para dar um efeito 3D */
+    max-width: 80%; /* Largura controlada */
+    margin: 40px auto; /* Centraliza a div na página */
+}
+
+/* Título */
+.title-container h1 {
+    font-size: 40px; /* Tamanho grande e imponente para o título */
+    color: #f7d117; /* Cor dourada para dar destaque */
+    font-weight: bold; /* Deixa o título com um peso mais forte */
+    text-transform: uppercase; /* Letras maiúsculas para um visual mais forte */
+    letter-spacing: 2px; /* Espaçamento entre letras para uma sensação de grandiosidade */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra de texto para dar profundidade */
+}
+
+/* Subtítulo */
+.title-container h2 {
+    font-size: 24px; /* Tamanho confortável para o subtítulo */
+    color: #ffffff; /* Cor branca para contraste */
+    font-weight: 400; /* Peso mais leve para o subtítulo */
+    line-height: 1.6; /* Maior altura de linha para leitura fácil */
+    text-align: center; /* Garante que o subtítulo esteja centralizado */
+    margin-top: 10px; /* Espaço superior */
+    max-width: 80%; /* Largura controlada para manter o foco */
+    margin-left: auto; /* Centraliza */
+    margin-right: auto; /* Centraliza */
+    font-style: italic; /* Deixa o subtítulo em itálico para um toque de elegância */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra leve no subtítulo */
+}
+
+/* Efeito hover no título e subtítulo */
+.title-container h1:hover,
+.title-container h2:hover {
+    transform: scale(1.05); /* Aumenta o tamanho de forma suave */
+    color: #ffeb3b; /* Muda para um amarelo mais forte ao passar o mouse */
+    transition: all 0.3s ease-in-out; /* Transição suave */
+}
+
+
+
+
+
+/* A PARTIR DAQUI É A ABA DE CRIAÇÃO DE PP!!! ACIMA DISSO É A ABA DO MAPA */
+
+
+
+/* Estilos da criação de personagem */
+.criar-pp {
+    background-color: #121212;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.criar-pp-container {
+    background-color: rgba(18, 18, 18, 0.85);
+    border-radius: 15px;
+    padding: 40px;
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.criar-pp h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.criar-pp p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.criar-pp form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.criar-pp label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.criar-pp input, .criar-pp select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+.criar-pp input:focus, .criar-pp select:focus {
+    border-color: #f1c40f;
+    outline: none;
+}
+
+.criar-pp button {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+.criar-pp button:hover {
+    background-color: #005f73;
+}
+
+.criar-pp button:active {
+    background-color: #004d5b;
+}
+
+/* Descrições ao lado dos atributos */
+.atributo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.atributo .descricao {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+
+
+
+/* DAQUI EM DIANTE E´A ABA GAMEPASS!!!!! ACIMA DISSO É A ABA DE CRIAÇÃO DE PP */
+
+
+
+
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #f39c12;
+    outline: none;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+.character-stats {
+    margin-top: 30px;
+    text-align: left;
+    color: #ecf0f1;
+}
+
+.character-stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.character-stats p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.perk {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #16a085;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+canvas {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group select {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+button:focus {
+    outline: none;
+}
+
+#perkText {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    label, input, select, button {
+        font-size: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff00ff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar a:hover {
+    color: #ff0066;
+}
+
+/* Gamepass Container */
+.gamepass-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #232323, #111111);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 153, 0.8);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Título */
+.gamepass-container h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #00ff99;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99, 0 0 45px #ff00ff;
+    animation: neon-glow 1.5s ease-in-out infinite;
+}
+
+/* Gamepass Item */
+.gamepass-item {
+    background: rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid #ff00ff;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    animation: item-glow 1.5s ease-in-out infinite;
+}
+
+.gamepass-item h2 {
+    font-size: 36px;
+    color: #ff0066;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #ff0066, 0 0 30px #ff00ff;
+    animation: neon-glow 2s ease-in-out infinite;
+}
+
+.gamepass-item p {
+    font-size: 20px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Efeitos de hover */
+.gamepass-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 0, 102, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.gamepass-item:hover h2 {
+    color: #00ff99;
+    text-shadow: 0 0 30px #00ff99, 0 0 50px #ff0066;
+}
+
+.gamepass-item:hover p {
+    color: #fff;
+}
+
+/* Animações neon */
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 20px #ff0066, 0 0 30px #ff0066;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 30px #00ff99, 0 0 40px #00ff99, 0 0 50px #ff0066;
+    }
+    100% {
+        text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 20px #ff0066, 0 0 30px #ff0066;
+    }
+}
+
+@keyframes item-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 102, 0.8), 0 0 20px rgba(255, 0, 102, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 102, 0.9), 0 0 40px rgba(255, 0, 102, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 102, 0.8), 0 0 20px rgba(255, 0, 102, 0.6);
+    }
+}
+
+/* Efeito de fundo de cassino */
+body {
+    background: radial-gradient(circle, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .gamepass-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .gamepass-container h1 {
+        font-size: 40px;
+    }
+
+    .gamepass-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .gamepass-item h2 {
+        font-size: 28px;
+    }
+
+    .gamepass-item p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gamepass-container h1 {
+        font-size: 30px;
+    }
+
+    .gamepass-item {
+        padding: 10px;
+    }
+
+    .gamepass-item h2 {
+        font-size: 24px;
+    }
+
+    .gamepass-item p {
+        font-size: 16px;
+    }
+}
+
+/* Reset das mudanças no estilo do menu */
+.navbar a {
+    color: #fff; /* Cor original das letras do menu */
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Remover o efeito neon do título */
+.gamepass-container h1 {
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Remover o brilho e a animação das letras e itens */
+.gamepass-item h2 {
+    color: #ff0066;
+    text-shadow: none;
+}
+
+.gamepass-item p {
+    color: #e0e0e0;
+}
+
+/* Remover os efeitos de hover */
+.gamepass-item:hover {
+    transform: none;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.gamepass-item:hover h2 {
+    color: #ff0066;
+    text-shadow: none;
+}
+
+.gamepass-item:hover p {
+    color: #e0e0e0;
+}
+
+/* Corpo e fundo */
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+
+
+
+/* AGORA AJUSTE NAS PAGINAS DE RAÇAS!!!!!!!!!!!!!!!!! HUMANOS:
+
+

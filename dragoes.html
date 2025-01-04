@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragão - Crossoverso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #2675c3, #34495e);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            padding: 20px;
+            position: static; /* Menu não ficará fixo no topo */
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            background-color: #e74c3c;
+            border-radius: 5px;
+            box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .raca-info {
+            margin-top: 80px;
+            text-align: center;
+            padding: 40px 20px;
+            flex: 1;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .gif img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gif img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        h1 {
+            color: #f1c40f;
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            color: #e74c3c;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .habilidades {
+            background-color: #2c3e50; /* Cor mais sombria e mística */
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7); /* Sombra mais forte */
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #34495e; /* Cor mais escura e profunda */
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #bdc3c7;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .habilidades li:hover {
+            background-color: #2c3e50; /* Escurece ao passar o mouse */
+            transform: scale(1.03);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        footer p {
+            font-family: 'Playfair Display', serif;
+        }
+
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .navbar a {
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .habilidades li {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Dragão - A Criatura</h1>
+        <div class="gif">
+            <img src="dragao.gif" alt="Licht"> <br> <br>
+        </div>
+
+        <h2>Habilidades e Transformações:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Forma Humanoide:</span> O dragão assume uma forma humana, perdendo parte de seu poder original. No entanto, ele mantém suas habilidades essenciais, como força aprimorada e resistência elevada, e uma habilidade reduzida de controle elemental. (Requer 5 de EGO)</li>
+                <li><span>Forma Híbrida:</span> O dragão assume uma forma meio humana, meio dragão. Seus atributos físicos são aumentados, e ele ganha a capacidade de controlar um dos quatro elementos de forma mais eficiente. (Requer 8 de Força e 7 de EGO)</li>
+                <li><span>Forma Completa:</span> O dragão retorna à sua forma total de dragão, com grande poder elemental e resistência sobre-humana. (Requer 10 de Força e 10 de EGO)</li>
+                <li><span>Fúria Elemental:</span> O dragão invoca uma tempestade de um dos seus elementos, causando dano massivo. (Requer 9 de Força e 8 de EGO)</li>
+                <li><span>Garras Flamejantes:</span> O dragão faz com que suas garras se cobram com fogo, aumentando o dano de seus ataques físicos e lançando garras flamejantes à distância. (Requer 7 de Força e 6 de Agilidade)</li>
+                <li><span>Escudo Elemental:</span> O dragão cria um escudo de seu próprio elemento, protegendo-se de danos. (Requer 6 de Força e 6 de Inteligência)</li>
+                <li><span>Voo Aéreo:</span> Quando em forma híbrida ou completa

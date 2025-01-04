@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanos - Crossoverso</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #bd8080;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Menu */
+        .navbar {
+            background-color: #000000;  /* Fundo preto suave */
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: #ecf0f1;  /* Branco suave */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;  /* Aumentando um pouco o tamanho das letras */
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+
+        /* Raca Info */
+        .raca-info {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .raca-info h1 {
+            color: #f39c12;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Imagem da raça */
+        .gif {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .gif img {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Habilidades e Transformações */
+        .habilidades {
+            margin-top: 40px;
+        }
+
+        .habilidade, .transformacao {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .habilidade h4, .transformacao h4 {
+            color: #f39c12;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .habilidade p, .transformacao p {
+            color: #ecf0f1;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Destaque para as transformações */
+        .transformacao {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2c3e50;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 40px;
+            color: #ecf0f1;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <!-- Informações sobre os Humanos -->
+    <div class="raca-info">
+        <h1>Humanos</h1>
+        <div class="gif">
+            <img src="Humanos.gif" alt="Humano">
+        </div>
+
+        <div class="habilidades">
+            <h3>Habilidades e Transformações</h3>
+
+            <!-- Habilidade 1 -->
+            <div class="habilidade">
+                <h4>Sabedoria Avançada</h4>
+                <p><strong>Requer:</strong> 5 de Inteligência</p>
+                <p>Humanos com +5 de Inteligência podem acessar uma compreensão superior de combate. Isso permite que dominem armas brancas com grande destreza, além de copiarem movimentos dos inimigos após observá-los brevemente.</p>
+            </div>
+
+            <!-- Habilidade 2 -->
+            <div class="habilidade">
+                <h4>Os 5 Sentidos</h4>
+                <p><strong>Requer:</strong> 7 de Inteligência</p>
+                <p>Humanos com um cérebro altamente evoluído podem unir todos os seus sentidos em um estado perfeito, ativando o "Sexto Sentido". Isso permite prever os movimentos do oponente, reagir com extrema rapidez e detectar perigos iminentes.</p>
+            </div>
+
+            <!-- Habilidade 3 -->
+            <div class="habilidade">
+                <h4>Aço Forjado</h4>
+                <p><strong>Requer:</strong> Nenhum atributo</p>
+                <p>Humanos têm uma habilidade excepcional com a forja, podendo criar lâminas de alta qualidade personalizadas para seu estilo de combate.</p>
+            </div>
+
+            <!-- Habilidade 4 -->
+            <div class="habilidade">
+                <h4>Zona</h4>
+                <p><strong>Requer:</strong> 10 de Força</p>
+                <p>Quando em perigo, o humano ativa um estado de adrenalina máxima chamado "Zona". Durante esse período, suas capacidades físicas se igualam às do oponente, permitindo uma luta intensa por um curto tempo. Após o fim da luta, o corpo entra em colapso e fica exausto por várias horas.</p>
+            </div>
+
+            <!-- Habilidade 5 -->
+            <div class="habilidade">
+                <h4>Golpe Mortal</h4>
+                <p><strong>Requer:</strong> 8 de Força</p>
+                <p>O humano concentra toda sua força em um golpe devastador, causando dano extremo e paralisando brevemente o oponente. Este golpe é poderoso, mas deixa o usuário cansado após o uso.</p>
+            </div>
+
+            <!-- Habilidade 6 -->
+            <div class="habilidade">
+                <h4>Explosão Cinética</h4>
+                <p><strong>Requer:</strong> 7 de Força e 6 de Agilidade</p>
+                <p>O humano é capaz de liberar uma onda de força concentrada, gerando uma explosão de impacto a uma distância média. A onda empurra inimigos próximos e causa dano significativo.</p>
+            </div>
+
+            <!-- Habilidade 7 -->
+            <div class="habilidade">
+                <h4>Impacto de Foco</h4>
+                <p><strong>Requer:</strong> 6 de Inteligência e 7 de Força</p>
+                <p>Focando sua energia física, o humano cria um ataque concentrado que é lançado à distância, atingindo o oponente com grande precisão e força. Esse golpe pode causar dano direto e desestabilizar a posição do inimigo.</p>
+            </div>
+
+            <!-- Habilidade 8 -->
+            <div class="habilidade">
+                <h4>Golpe Relâmpago</h4>
+                <p><strong>Requer:</strong> 8 de Agilidade e 6 de Força</p>
+                <p>Uma habilidade rápida e letal onde o humano executa um golpe com extrema velocidade, atingindo o inimigo com uma força imensa em um segundo. Essa habilidade é difícil de bloquear devido à sua rapidez.</p>
+            </div>
+
+            <!-- Transformação 1 -->
+            <div class="transformacao">
+                <h4>Transformação: Avatar de Fúria</h4>
+                <p><strong>Requer:</strong> 10 de Força e 8 de EGO</p>
+                <p>O humano se transforma temporariamente, liberando uma aura de pura energia física. Durante essa transformação, seus músculos se expandem, aumentando sua força, resistência e velocidade. Além disso, ele pode gerar rajadas de energia física a partir de seus punhos, atacando à distância.</p>
+            </div>
+
+            <!-- Transformação 2 -->
+            <div class="transformacao">
+                <h4>Golpe Final: Punho de Gaia</h4>
+                <p><strong>Requer:</strong> 10 de Força e 8 de EGO</p>
+                <p>Quando o humano está à beira da exaustão, ele pode realizar um golpe final poderoso, com um punho carregado de energia de seu próprio corpo e do ambiente ao seu redor. O golpe causa um dano catastrófico e afeta a área ao redor, sendo capaz de destruir obstáculos ou causar dano em múltiplos inimigos próximos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

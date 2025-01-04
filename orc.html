@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orc - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #9b2d20, #e74c3c, #f44f2b); /* Degradê vibrante */
+            background-attachment: fixed;
+            overflow-x: hidden;
+            transition: background-color 0.5s ease;
+            padding-top: 100px; /* Aumenta o padding-top para que o conteúdo não fique coberto pelo menu */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            position: absolute; /* Mantemos o menu fixo */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 15px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #f39c12;
+            border-radius: 30px;
+            transform: scale(1.1);
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 50px 20px 50px;
+            flex: 1;
+        }
+
+        .gif img {
+            width: 70%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gif img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: #f1c40f;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        h2 {
+            color: #f39c12;
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .habilidades {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .habilidades li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .gif img {
+                width: 90%;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .navbar a {
+                margin: 5px 0;
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .habilidades li {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+    <div class="raca-info">
+        <h1>Orc</h1>
+        <div class="gif">
+            <img src="orczao.gif" alt="Orc">
+        </div>
+
+        <h2>Habilidades de Força e Tank:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Golpe Brutal:</span> O Orc executa um poderoso golpe de machado ou clava, causando grande dano a um único inimigo e com chances de atordoá-lo por um turno, deixando-o vulnerável a ataques subsequentes. (Requer 10 de Força, 6 de Velocidade)</li>
+                <li><span>Fúria Selvagem:</span> O Orc entra em um estado de fúria, aumentando significativamente seu dano e resistência por um curto período. Durante esse tempo, o Orc também recebe menos dano de inimigos e se torna mais difícil de ser derrubado. (Requer 9 de Força, 8 de Ego)</li>
+                <li><span>Manto de Ferro:</span> O Orc cria uma camada de energia protetora que funciona como uma armadura adicional, reduzindo o dano recebido por ataques físicos e mágicos. Dura alguns turnos e pode ser ativado quando a saúde do Orc está abaixo de 50%. (Requer 8 de Força, 7 de Ego)</li>
+                <li><span>Destruição de Terra:</span> O Orc bate o chão com uma força esmagadora, criando uma onda de choque que causa dano massivo aos inimigos ao redor e os empurra para longe, quebrando formações e interrompendo habilidades inimigas. (Requer 10 de Força, 7 de Velocidade)</li>
+                <li><span>Carregamento de Besta:</span> O Orc usa sua enorme força para correr e colidir com os inimigos, causando dano massivo e derrubando-os no chão. Esse ataque pode quebrar escudos e desorientar os inimigos atingidos. (Requer 9 de Força, 6 de Velocidade)</li>
+                <li><span>Grito de Guerra:</span> O Orc solta um grito ensurdecedor que aumenta a moral dos aliados próximos, concedendo-lhes um bônus de ataque e defesa por um tempo limitado. Inimigos dentro do alcance também têm suas defesas reduzidas. (Requer 8 de Ego, 6 de Força)</li>
+                <li><span>Recuperação Rápida:</span> O Orc regenera rapidamente uma parte de sua saúde após receber dano, se curando lentamente ao longo de alguns turnos. Pode ser usado em combate para aumentar sua durabilidade. (Requer 7 de Força, 5 de Ego)</li>
+                <li><span>Ataque Devastador:</span> O Orc executa um ataque com sua arma que causa dano massivo em área ao redor dele. Esse ataque também tem uma chance de causar um efeito de sangramento nos inimigos atingidos. (Requer 10 de Força, 8 de Velocidade)</li>
+                <li><span>Fortaleza Imbatível:</span> O Orc ativa uma habilidade que torna seu corpo temporariamente quase imune a danos, aumentando sua resistência física e tornando-o imune a atordoamentos ou efeitos de controle de movimento por um tempo determinado. (Requer 8 de Força, 9 de Ego)</li>
+                <li><span>Pancada de Terra:</span> O Orc levanta o inimigo do chão com um poderoso golpe e o arremessa contra o solo, causando grande dano e interrompendo habilidades inimigas, enquanto gera um tremor que afeta a estabilidade de todos os inimigos próximos. (Requer 9 de Força, 7 de Velocidade)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

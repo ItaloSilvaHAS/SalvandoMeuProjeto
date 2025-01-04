@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vampiro - Crossoverso</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #8e1b23, #2c3e50); /* Degradê sutil de vermelho e preto */
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilo do menu futurista */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: #000;  /* Menu preto */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #c0392b;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            padding: 12px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+
+        .raca-info {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .raca-info h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+
+        .gif img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .gif img:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #f39c12;
+        }
+
+        .habilidades {
+            margin-top: 30px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .habilidades li {
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 10px 0;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .habilidades li:hover {
+            background-color: #e74c3c;
+            transform: translateX(10px);
+        }
+
+        .habilidade-transformacao {
+            background-color: #e74c3c;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1rem;
+            border-top: 2px solid #007bff;
+        }
+
+        /* Responsividade para mobile */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar a {
+                padding: 10px 20px;
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .gif img {
+                max-width: 80%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Vampiro</h1>
+        <div class="gif">
+            <img src="vampiro.gif" alt="Vampiro">
+        </div>
+        <h2>Habilidades e Transformações:</h2>
+        <div class="habilidades">
+            <ul>
+                <li>Potencial de despertar (Requer: +5 EGO)</li>
+                <li>Força Noturna (Requer: +8 Força, +7 Velocidade)</li>
+                <li>Garras de Sombra (Requer: +8 Força, +7 Velocidade)</li>
+                <li>Regeneração Vampírica (Requer: +9 Inteligência, +8 Força)</li>
+                <li>Físico Sob-Humano (Requer: +9 Força, +8 Velocidade)</li>
+                <li class="habilidade-transformacao">Sede de Sangue (Transformação) (Requer: +10 Força, +9 Ego)</li>
+                <li class="habilidade-transformacao">Lorde Vampiro (Transformação) (Requer: +10 Força, +9 Ego)</li>
+                <li>Reviver os Mortos (Requer: +10 Inteligência, +8 Ego)</li>
+                <li>Manto da Noite (Requer: +8 Velocidade, +7 Inteligência)</li>
+                <li>Toque da Morte (Requer: +9 Força, +9 Ego)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

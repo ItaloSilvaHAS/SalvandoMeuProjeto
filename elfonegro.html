@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elfos Negros - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #34495e); /* Degradê de cores escuras e sombrias */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white; /* Cor das letras no menu */
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase; /* Letra maiúscula no menu */
+            transition: all 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c; /* Cor de hover vermelha */
+            color: white;
+            border-radius: 5px;
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência para dar um toque mais sombrio */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            margin: 20px;
+        }
+
+        .gif img {
+            width: 60%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        h1, h2 {
+            color: #f1c40f;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra no texto para dar um efeito mais místico */
+        }
+
+        .habilidades {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .habilidades li:hover {
+            background-color: #444;
+            transform: scale(1.03);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+        }
+
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Elfo Negro</h1>
+        <div class="gif">
+            <img src="elfo-negro.gif" alt="Elfo Negro">
+        </div>
+
+        <h2>Habilidades e Transformações:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Resistência a Magias:</span> O Elfo Negro possui uma resistência natural a magias, reduzindo o dano de feitiçarias e habilidades mágicas em 30%. (Requer 10 de Inteligência)</li>
+                <li><span>Aura de Sombra:</span> O Elfo Negro emite uma aura sombria ao seu redor, desorientando inimigos próximos e dificultando seus ataques físicos e mágicos. (Requer 8 de Ego, 6 de Inteligência)</li>
+                <li><span>Toque Absorvente:</span> O Elfo Negro pode tocar um inimigo e drenar sua vitalidade, causando dano contínuo e enfraquecendo o adversário. (Requer 7 de Força, 5 de Inteligência)</li>
+                <li><span>Passos Silenciosos:</span> O Elfo Negro se move com extrema agilidade e silêncio, dificultando a detecção por inimigos e permitindo ataques furtivos. (Requer 7 de Velocidade, 5 de Ego)</li>
+                <li><span>Fúria das Sombras:</span> O Elfo Negro invoca uma tempestade de sombras que o envolve, aumentando sua força e velocidade por um tempo limitado e causando dano aos inimigos próximos. (Requer 8 de Força, 6 de Velocidade)</li>
+                <li><span>Reflexos Sombrio:</span> O Elfo Negro pode desviar de ataques com grande agilidade, refletindo uma parte do dano de volta ao inimigo. (Requer 7 de Velocidade, 5 de Ego)</li>
+                <li><span>Véu da Noite:</span> O Elfo Negro se esconde nas sombras, tornando-se invisível por um breve período, perfeito para ataques furtivos ou evasão. (Requer 6 de Velocidade, 6 de Ego)</li>
+                <li><span>Visão das Sombras:</span> O Elfo Negro tem a capacidade de ver claramente na escuridão total, detectando inimigos e objetos ocultos nas sombras. (Requer 5 de Inteligência, 4 de Velocidade)</li>
+                <li><span>Transformação Sombria:</span> O Elfo Negro assume uma forma mais poderosa, coberta por sombras, que aumenta sua força, resistência e velocidade por um curto período de tempo. (Requer 10 de Ego, 8 de Força)</li>
+                <li><span>Garras das Sombras:</span> O Elfo Negro convoca garras feitas de pura sombra que surgem de suas mãos, causando dano significativo aos inimigos e podendo cortar através de materiais sólidos. (Requer 7 de Força, 6 de Velocidade)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

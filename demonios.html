@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demônios - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #8B0000, #1C1C1C);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-size: cover;
+        }
+
+        /* Menu */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #ff6347;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+        }
+
+        .gif img {
+            width: 60%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 69, 0, 0.8);
+        }
+
+        h1, h2 {
+            color: #ff6347;
+            margin-bottom: 20px;
+            font-size: 3em;
+        }
+
+        .habilidades {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 69, 0, 0.6);
+            margin-top: 30px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: rgba(30, 30, 30, 0.8);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .habilidades li:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 3px solid #ff6347;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Demônio</h1>
+        <div class="gif">
+            <img src="Demobio.gif" alt="Demônio"> <br> <br>
+        </div>
+
+        <h2>Habilidades e Transformações:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Chamas Negras:</span> O demônio pode conjurar chamas negras que queimam não só fisicamente, mas também corroem a alma do inimigo, causando dano ao longo do tempo. (Requer 8 de Inteligência, 5 de Ego)</li>
+                <li><span>Chicote Infernal:</span> O demônio invoca um chicote de chamas infernais para atacar à distância, causando grandes danos e queimaduras nos inimigos atingidos. (Requer 6 de Força, 7 de Velocidade)</li>
+                <li><span>Asas Demoníacas:</span> O demônio pode invocar suas asas de fogo, permitindo voo por curtas distâncias e proporcionando uma vantagem estratégica em combate. (Requer 8 de Velocidade, 6 de Ego)</li>
+                <li><span>Forma Demoníaca:</span> O demônio assume uma forma ainda mais poderosa, com aumento significativo de força e resistência por um tempo limitado. (Requer 7 de Força, 5 de Ego)</li>
+                <li><span>Olhar Infernal:</span> O demônio pode lançar um olhar hipnótico que paralisa momentaneamente os inimigos, tornando-os vulneráveis a ataques. (Requer 6 de Ego, 5 de Inteligência)</li>
+                <li><span>Fúria Infernal:</span> O demônio entra em um estado de fúria, aumentando drasticamente sua velocidade e força de ataque por um curto período de tempo. (Requer 9 de Força, 6 de Ego)</li>
+                <li><span>Aura Demoníaca:</span> O demônio emana uma aura de terror ao redor de si, fazendo com que inimigos próximos fiquem aterrorizados, diminuindo sua moral e precisão. (Requer 8 de Ego, 5 de Velocidade)</li>
+                <li><span>Garras Infernais:</span> O demônio convoca garras flamejantes para suas mãos, permitindo ataques rápidos e com alto dano de corte e fogo. (Requer 7 de Força, 6 de Velocidade)</li>
+                <li><span>Grito do Abismo:</span> O demônio emite um grito sobrenatural, gerando ondas sonoras que desorientam os inimigos e diminuem suas defesas por um tempo. (Requer 8 de Ego, 7 de Inteligência)</li>
+                <li><span>Imortalidade Parcial:</span> O demônio ganha uma regeneração acelerada, recuperando rapidamente uma quantidade significativa de vida ao longo de vários turnos, tornando-se mais difícil de derrotar em combate prolongado. (Requer 10 de Força, 8 de Ego)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

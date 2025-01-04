@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anão - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(145deg, #2c3e50, #34495e);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #f39c12;
+            color: #2c3e50;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gif img {
+            width: 70%;
+            max-width: 600px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        h1, h2 {
+            color: #f39c12;
+            margin-bottom: 20px;
+            font-size: 3rem;
+        }
+
+        .habilidades {
+            background-color: #34495e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #2c3e50;
+            margin: 12px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .habilidades li:hover {
+            background-color: #f39c12;
+            color: #2c3e50;
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .habilidades li span {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #222;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .navbar a {
+                margin: 5px 0;
+            }
+
+            h1, h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Anão</h1>
+        <div class="gif">
+            <img src="anao.avif" alt="Anão">
+        </div> <BR> <BR>
+
+        <h2>Habilidades:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Forja Rápida:</span> O Anão cria rapidamente uma arma improvisada ou reforça uma já existente, concedendo a si mesmo ou a um aliado uma arma temporária com bônus de dano para alguns turnos. (Requer 8 de Inteligência, 6 de Força)</li>
+                <li><span>Reparo de Armadura:</span> O Anão conserta rapidamente a armadura de um aliado durante o combate, restaurando uma parte significativa da durabilidade da armadura. (Requer 7 de Inteligência, 5 de Força)</li>
+                <li><span>Golpe de Forjador:</span> O Anão utiliza suas habilidades como forjador para imbuir um golpe com energia concentrada, causando dano significativo. (Requer 9 de Inteligência, 7 de Força)</li>
+                <li><span>Mestre Reparador:</span> O Anão pode realizar um reparo instantâneo em armas e equipamentos danificados, restaurando um item para sua condição original. (Requer 10 de Inteligência, 8 de Força)</li>
+                <li><span>Escudo de Ferro:</span> O Anão forja rapidamente um escudo de ferro sólido que pode ser usado para bloquear ataques. (Requer 8 de Inteligência, 7 de Força)</li>
+                <li><span>Poder da Forja:</span> O Anão invoca um poder da forja, aumentando temporariamente a força e a resistência de seus aliados próximos. (Requer 9 de Inteligência, 8 de Ego)</li>
+                <li><span>Explosão de Carvão:</span> O Anão lança um explosivo preparado com carvão e outros materiais, causando dano em área. (Requer 8 de Inteligência, 6 de Força)</li>
+                <li><span>Escudo de Aço Refletivo:</span> O Anão cria um escudo mágico temporário que reflete parte do dano recebido de volta ao inimigo. (Requer 10 de Inteligência, 7 de Força)</li>
+                <li><span>Lâmina Forjada:</span> O Anão forja uma lâmina mágica diretamente de seu martelo, causando dano significativo. (Requer 9 de Inteligência, 8 de Força)</li>
+                <li><span>Chama Forjadora:</span> O Anão usa uma chama mágica para lançar uma rajada de fogo em linha reta. (Requer 8 de Inteligência, 7 de Força)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

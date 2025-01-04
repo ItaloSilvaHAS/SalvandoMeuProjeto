@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem Criado</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="character-display">
+        <h2>Seu Personagem</h2>
+
+        <canvas id="attributesChart" width="400" height="400"></canvas>
+
+        <script>
+            // Recupera os dados do personagem do localStorage
+            const character = JSON.parse(localStorage.getItem('character'));
+
+            // Exibe os dados do personagem
+            document.body.innerHTML += `
+                <p><strong>Raça:</strong> ${character.race}</p>
+                <p><strong>Classe:</strong> ${character.class}</p>
+                <p><strong>Força:</strong> ${character.strength}</p>
+                <p><strong>Agilidade:</strong> ${character.agility}</p>
+                <p><strong>Inteligência:</strong> ${character.intelligence}</p>
+            `;
+
+            // Cria o gráfico com os atributos
+            const ctx = document.getElementById('attributesChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Força', 'Agilidade', 'Inteligência'],
+                    datasets: [{
+                        label: 'Atributos',
+                        data: [character.strength, character.agility, character.intelligence],
+                        backgroundColor: ['#ff5733', '#33ff57', '#3357ff'],
+                        borderColor: ['#c13f2e', '#2ecc71', '#2a77c6'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

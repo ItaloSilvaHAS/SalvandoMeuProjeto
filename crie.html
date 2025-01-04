@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Personagem - Crossoverso RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+        <span class="hamburger" onclick="toggleMenu()">&#9776;</span> <!-- Menu hambúrguer -->
+    </div>
+
+    <div class="criar-pp">
+        <div class="criar-pp-container">
+            <h2>Crie seu Personagem</h2>
+            <p>Escolha uma raça, preencha os atributos e finalize a criação do seu herói ou vilão!</p>
+            
+            <form id="criar-pp-form">
+                <label for="raça">Escolha sua Raça:</label>
+                <select id="raça" name="raça">
+                    <option value="humano">Humano</option>
+                    <option value="dragao">Dragão</option>
+                    <option value="gigante">Gigante</option>
+                    <option value="demonio">Demônio</option>
+                    <option value="elfo_negro">Elfo Negro</option>
+                    <option value="fada">Fada</option>
+                    <option value="bruxo">Bruxo</option>
+                    <option value="orc">Orc</option>
+                    <option value="anao">Anão</option>
+                    <option value="vampiro">Vampiro</option>
+                    <option value="lich">Lich</option>
+                    <option value="lobisomem">Lobisomem</option>
+                    <option value="amaldiçoado">Amaldiçoado</option>
+                </select>
+
+                <label for="nome">Nome do Personagem:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <!-- Força -->
+                <div class="atributo">
+                    <label for="forca">Força (Físico - afeta ataque e defesa):</label>
+                    <input type="number" id="forca" name="forca" min="0" max="10" value="0" required>
+                    <span class="descricao">Atributo físico, influencia sua força de ataque e defesa.</span>
+                </div>
+
+                <!-- Velocidade -->
+                <div class="atributo">
+                    <label for="velocidade">Velocidade (Movimento - afeta esquiva e ataque rápido):</label>
+                    <input type="number" id="velocidade" name="velocidade" min="0" max="10" value="0" required>
+                    <span class="descricao">Atributo de movimento, influencia esquiva e ataque rápido.</span>
+                </div>
+
+                <!-- Inteligência -->
+                <div class="atributo">
+                    <label for="inteligencia">Inteligência (Magia - afeta feitiços e habilidades):</label>
+                    <input type="number" id="inteligencia" name="inteligencia" min="0" max="10" value="0" required>
+                    <span class="descricao">Atributo mental, afeta suas habilidades mágicas e raciocínio.</span>
+                </div>
+
+                <!-- Ego -->
+                <div class="atributo">
+                    <label for="ego">Ego (Determinação - afeta resistência e controle):</label>
+                    <input type="number" id="ego" name="ego" min="0" max="10" value="0" required>
+                    <span class="descricao">Atributo psicológico, afeta resistência mental e controle em batalha.</span>
+                </div>
+
+                <!-- Carisma -->
+                <div class="atributo">
+                    <label for="carisma">Carisma (Liderança - afeta relações e influência):</label>
+                    <input type="number" id="carisma" name="carisma" min="0" max="10" value="0" required>
+                    <span class="descricao">Atributo social, afeta suas habilidades de liderança e negociação.</span>
+                </div>
+
+                <!-- Sorte -->
+                <div class="atributo">
+                    <label for="sorte">Sorte (Fatores Aleatórios - afeta eventos aleatórios):</label>
+                    <input type="number" id="sorte" name="sorte" min="0" max="10" value="0" required>
+                    <span class="descricao">Atributo de sorte, afeta o que pode ocorrer inesperadamente.</span>
+                </div>
+
+                <p id="total-pontos">Pontos restantes: 15</p>
+                <button type="submit">Criar Personagem</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let totalPontos = 15; // Pontos iniciais
+        const inputs = document.querySelectorAll('input[type="number"]');
+        const totalPontosElement = document.getElementById('total-pontos');
+
+        // Atualiza o contador de pontos restantes
+        function atualizarPontos() {
+            let pontosUsados = 0;
+            inputs.forEach(input => {
+                pontosUsados += parseInt(input.value);
+            });
+            totalPontos = 15 - pontosUsados;
+            totalPontosElement.textContent = `Pontos restantes: ${totalPontos}`;
+        }
+
+        // Escuta mudanças nos campos dos atributos
+        inputs.forEach(input => {
+            input.addEventListener('input', atualizarPontos);
+        });
+
+        // Envia os dados para a página de ficha
+        function enviarDados(event) {
+            event.preventDefault(); // Previne o envio do formulário
+            
+            const nome = document.getElementById('nome').value;
+            const raça = document.getElementById('raça').value;
+            const forca = document.getElementById('forca').value;
+            const velocidade = document.getElementById('velocidade').value;
+            const inteligencia = document.getElementById('inteligencia').value;
+            const ego = document.getElementById('ego').value;
+            const carisma = document.getElementById('carisma').value;
+            const sorte = document.getElementById('sorte').value;
+    
+            // Armazenar os dados no sessionStorage
+            sessionStorage.setItem('nome', nome);
+            sessionStorage.setItem('raça', raça);
+            sessionStorage.setItem('forca', forca);
+            sessionStorage.setItem('velocidade', velocidade);
+            sessionStorage.setItem('inteligencia', inteligencia);
+            sessionStorage.setItem('ego', ego);
+            sessionStorage.setItem('carisma', carisma);
+            sessionStorage.setItem('sorte', sorte);
+    
+            // Redireciona para a página de ficha
+            window.location.href = 'ficha.html';
+        }
+
+        document.getElementById('criar-pp-form').addEventListener('submit', enviarDados);
+    </script>
+</body>
+</html>

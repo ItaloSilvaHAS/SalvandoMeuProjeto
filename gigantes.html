@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigantes - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6c4f3d, #2c3e50); /* Degradê de marrom e preto */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Estilo do menu futurista */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+        }
+
+        .gif img {
+            width: 60%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .habilidades {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .habilidades li:hover {
+            background-color: #444;
+            transform: scale(1.03);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Gigante</h1>
+        <div class="gif">
+            <img src="Gigant.gif" alt="Gigante">
+        </div>
+
+        <h2>Habilidades e Transformações:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Força Bruta:</span> Aumenta significativamente a força de ataque, permitindo quebrar obstáculos pesados e causar dano massivo em batalhas. (Requer: 10 de Força)</li>
+                <li><span>Poder de Colosso:</span> Aumenta a resistência física, permitindo ao gigante aguentar mais ataques sem sofrer grandes danos. (Requer: 8 de Força, 5 de Velocidade)</li>
+                <li><span>Pata de Ferro:</span> As pernas do gigante ganham resistência extra, permitindo saltos enormes e a habilidade de esmagar o solo ao pisar, criando tremores. (Requer: 7 de Força, 6 de Velocidade)</li>
+                <li><span>Colisão de Impacto:</span> O gigante pode realizar um ataque devastador ao se lançar contra o inimigo, causando grande dano de área. (Requer: 10 de Força, 6 de Velocidade)</li>
+                <li><span>Forma Humana:</span> O gigante pode transformar seu corpo em uma forma humana por um tempo limitado, permitindo interagir com o mundo de uma maneira mais discreta, mas perdendo parte de sua força bruta. (Requer: 5 de Inteligência, 5 de Ego)</li>
+                <li><span>Olhar Imponente:</span> O gigante pode usar sua presença para intimidar inimigos próximos, reduzindo sua moral e eficácia em combate. (Requer: 8 de Força, 6 de Ego)</li>
+                <li><span>Fúria de Goliath:</span> Aumenta a força e a velocidade por um curto período, mas consome grandes quantidades de energia. (Requer: 10 de Força, 4 de Ego)</li>
+                <li><span>Resistência de Titã:</span> Reduz a quantidade de dano recebido de ataques físicos em grande escala, tornando o gigante praticamente imbatível em combates diretos. (Requer: 9 de Força, 6 de Velocidade)</li>
+                <li><span>Golpe de Terra:</span> Ao bater no chão com força, o gigante cria uma onda de choque que derruba inimigos ao redor. (Requer: 8 de Força, 7 de Velocidade)</li>
+                <li><span>Manto de Pedra:</span> A pele do gigante se torna temporariamente tão dura quanto pedra, oferecendo proteção extra contra danos mágicos e físicos. (Requer: 10 de Força, 7 de Velocidade)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

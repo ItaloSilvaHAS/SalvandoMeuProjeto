@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha do Personagem - Crossoverso RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Para o gráfico -->
+</head>
+<style>
+    /* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212; /* Cor de fundo escura */
+    color: #f0f0f0; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Container principal da ficha */
+.ficha-container {
+    background: linear-gradient(135deg, rgba(0, 30, 60, 0.7), rgba(0, 123, 255, 0.7)); /* Gradiente azul futurista */
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título da ficha */
+.ficha-container h2 {
+    font-size: 32px;
+    color: #ffcc00; /* Amarelo vibrante para o título */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Layout flex para imagem e dados */
+.ficha-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.foto {
+    max-width: 250px;
+    margin-right: 30px;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 20px;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo dos dados da ficha */
+.ficha {
+    text-align: left;
+    color: #e0e0e0;
+}
+
+.ficha p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.ficha strong {
+    color: #ffcc00; /* Amarelo para os títulos */
+}
+
+/* Estilo para o gráfico */
+#grafico-atributos {
+    margin-top: 40px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Botão de navegação */
+.navegacao {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00b3e6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navegacao:hover {
+    background-color: #009bb3;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .ficha-container {
+        padding: 20px;
+    }
+
+    .ficha p {
+        font-size: 16px;
+    }
+
+    .foto img {
+        max-width: 200px;
+    }
+
+    .ficha-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #grafico-atributos {
+        max-width: 100%;
+    }
+}
+
+/* Efeito de glow nos textos */
+h2, .ficha p strong {
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), 0 0 20px rgba(255, 204, 0, 0.6), 0 0 30px rgba(255, 204, 0, 0.4);
+}
+
+/* Barra lateral de rolagem customizada */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(0, 123, 255, 0.8);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 123, 255, 1);
+}
+
+</style>
+<body>
+    <div class="ficha-container">
+        <h2>Ficha do Personagem</h2>
+
+        <!-- Header com imagem e dados -->
+        <div class="ficha-header">
+            <!-- Imagem do personagem -->
+            <div class="foto">
+                <img id="foto-personagem" src="" alt="Foto do Personagem">
+            </div>
+
+            <!-- Exibindo dados -->
+            <div class="ficha">
+                <p><strong>Nome:</strong> <span id="nome-ficha"></span></p>
+                <p><strong>Raça:</strong> <span id="raça-ficha"></span></p>
+                <p><strong>Força:</strong> <span id="forca-ficha"></span></p>
+                <p><strong>Velocidade:</strong> <span id="velocidade-ficha"></span></p>
+                <p><strong>Inteligência:</strong> <span id="inteligencia-ficha"></span></p>
+                <p><strong>Ego:</strong> <span id="ego-ficha"></span></p>
+                <p><strong>Carisma:</strong> <span id="carisma-ficha"></span></p>
+                <p><strong>Sorte:</strong> <span id="sorte-ficha"></span></p>
+            </div>
+        </div>
+
+        <!-- Gráfico de Atributos -->
+        <canvas id="grafico-atributos"></canvas>
+
+        <!-- Botão de Navegação -->
+        <button class="navegacao" onclick="location.href='index.html'">Voltar ao Menu</button>
+    </div>
+
+    <script>
+        // Recuperando dados da sessionStorage
+        const nome = sessionStorage.getItem('nome');
+        const raça = sessionStorage.getItem('raça');
+        const forca = sessionStorage.getItem('forca');
+        const velocidade = sessionStorage.getItem('velocidade');
+        const inteligencia = sessionStorage.getItem('inteligencia');
+        const ego = sessionStorage.getItem('ego');
+        const carisma = sessionStorage.getItem('carisma');
+        const sorte = sessionStorage.getItem('sorte');
+
+        // Preenchendo as informações na página
+        document.getElementById('nome-ficha').innerText = nome;
+        document.getElementById('raça-ficha').innerText = raça;
+        document.getElementById('forca-ficha').innerText = forca;
+        document.getElementById('velocidade-ficha').innerText = velocidade;
+        document.getElementById('inteligencia-ficha').innerText = inteligencia;
+        document.getElementById('ego-ficha').innerText = ego;
+        document.getElementById('carisma-ficha').innerText = carisma;
+        document.getElementById('sorte-ficha').innerText = sorte;
+
+        // Definindo a imagem do personagem com base na raça
+        const fotoPersonagem = document.getElementById('foto-personagem');
+        let imagemRaça = '';
+
+        switch (raça) {
+            case 'humano':
+                imagemRaça = 'Humanos.gif';  // Substitua pelo caminho correto do gif ou imagem
+                break;
+            case 'dragao':
+                imagemRaça = 'dragao.gif';  // Substitua pelo caminho correto do gif ou imagem
+                break;
+            case 'gigante':
+                imagemRaça = 'Gigant.gif';
+                break;
+            case 'demonio':
+                imagemRaça = 'Demobio.gif';
+                break;
+            case 'elfo_negro':
+                imagemRaça = 'elfo_negro.gif';
+                break;
+            case 'fada':
+                imagemRaça = 'Fadas.gif';
+                break;
+            case 'bruxo':
+                imagemRaça = 'bruxogeralt.webp';
+                break;
+            case 'orc':
+                imagemRaça = 'orczao.gif';
+                break;
+            case 'anao':
+                imagemRaça = 'anao.avif';
+                break;
+            case 'vampiro':
+                imagemRaça = 'vampiro.gif';
+                break;
+            case 'lich':
+                imagemRaça = 'lich.gif';
+                break;
+            case 'lobisomem':
+                imagemRaça = 'lobo.avif';
+                break;
+            case 'amaldiçoado':
+                imagemRaça = 'amal.gif';
+                break;
+            default:
+                imagemRaça = 'imagens/default.gif';  // Caso a raça não esteja definida, uma imagem padrão
+                break;
+        }
+
+        // Definindo a imagem do personagem
+        fotoPersonagem.src = imagemRaça;
+
+        // Criando o gráfico
+        const ctx = document.getElementById('grafico-atributos').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Força', 'Velocidade', 'Inteligência', 'Ego', 'Carisma', 'Sorte'],
+                datasets: [{
+                    label: nome,
+                    data: [forca, velocidade, inteligencia, ego, carisma, sorte],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

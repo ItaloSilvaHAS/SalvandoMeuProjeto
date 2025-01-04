@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossoverso - RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+        <span class="hamburger" onclick="toggleMenu()">&#9776;</span> <!-- Menu hambúrguer -->
+    </div>
+    
+
+    <div class="intro">
+        <div class="intro-content">
+            <h1>Bem-vindo ao <span class="highlight">Crossoverso</span></h1>
+            <p>Prepare-se para explorar raças místicas e classes poderosas. Seu futuro começa agora...</p>
+        </div>
+    </div>
+
+    <div class="home">
+        <div class="features">
+            <h2>Principais Atrativos:</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="criarppindex.jpg" alt="Criação de Personagem">
+                    <p>Crie seu personagem com atributos e raças exclusivas.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="mapaindex.avif" alt="Mapa Interativo">
+                    <p>Explore o mundo com um mapa interativo cheio de mistérios.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="allraçasindex.jpg" alt="Raças e Classes">
+                    <p>Escolha entre várias raças e classes, cada uma com habilidades únicas.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="allraçasindex.jpg" alt="Raças e Classes">
+                    <p>Escolha entre várias raças e classes, cada uma com habilidades únicas.</p>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active'); // Adiciona ou remove a classe 'active'
+        }
+    </script>
+    
+</body>
+</html>

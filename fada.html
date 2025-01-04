@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fada - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a29bfe, #ff7ecb); /* Degradê suave entre lilás e rosa claro */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white; /* Cor das letras no menu */
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase; /* Letra maiúscula no menu */
+            transition: all 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c; /* Cor de hover vermelha forte */
+            color: white;
+            border-radius: 5px;
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparente com fundo suave */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            margin: 20px;
+        }
+
+        .gif img {
+            width: 60%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        h1, h2 {
+            color: #f1c40f;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra no texto para dar um efeito mais etéreo */
+        }
+
+        .habilidades {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .habilidades li:hover {
+            background-color: #444;
+            transform: scale(1.03);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+        }
+
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Fada</h1>
+        <div class="gif">
+            <img src="Fadas.gif" alt="Fada">
+        </div>
+
+        <h2>Habilidades de Suporte:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Reforço Mágico:</span> A Fada emite uma aura mágica que aumenta a força de ataque e defesa de todos os aliados próximos, por um tempo limitado. (Requer 8 de Inteligência, 6 de Ego)</li>
+                <li><span>Cura Rápida:</span> A Fada pode curar rapidamente um aliado, restaurando uma quantidade moderada de saúde em um curto espaço de tempo. (Requer 7 de Inteligência, 5 de Ego)</li>
+                <li><span>Escudo de Luz:</span> A Fada cria um escudo protetor de luz ao redor de um aliado, reduzindo o dano que ele recebe por alguns turnos. (Requer 7 de Inteligência, 6 de Ego)</li>
+                <li><span>Aumento de Velocidade:</span> A Fada aumenta temporariamente a velocidade de movimento e ação de um aliado, permitindo-lhe agir mais rápido no combate. (Requer 8 de Velocidade, 5 de Ego)</li>
+                <li><span>Purificação de Maldição:</span> A Fada pode purificar um aliado de maldições e efeitos negativos, restaurando sua condição normal. (Requer 6 de Inteligência, 7 de Ego)</li>
+                <li><span>Aura de Proteção:</span> A Fada cria uma aura protetora ao redor de todos os aliados próximos, reduzindo o dano recebido por todos dentro da área por um tempo determinado. (Requer 9 de Inteligência, 6 de Ego)</li>
+                <li><span>Manto de Invisibilidade:</span> A Fada cria uma capa de invisibilidade sobre um aliado, tornando-o invisível por um tempo limitado ou até que ataque. (Requer 7 de Velocidade, 5 de Ego)</li>
+                <li><span>Revitalização:</span> A Fada pode restaurar uma grande quantidade de saúde e mana de um aliado, regenerando ambos lentamente por um período. (Requer 10 de Inteligência, 8 de Ego)</li>
+                <li><span>Barreira de Sombras:</span> A Fada cria uma barreira de sombras que absorve dano e reduz o impacto de ataques mágicos e físicos em um aliado por um tempo determinado. (Requer 6 de Inteligência, 5 de Força)</li>
+                <li><span>Toque Energizante:</span> A Fada toca um aliado, restaurando parcialmente sua energia (mana ou estamina) e aumentando sua eficácia nas ações realizadas por alguns turnos. (Requer 7 de Ego, 6 de Velocidade)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

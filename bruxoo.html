@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruxo - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #4b0082); /* Atmosfera tensa de batalha */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white; /* Letras brancas fortes no menu */
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s;
+            text-transform: uppercase; /* Letras em maiúsculo */
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c; /* Cor de hover vermelho forte */
+            color: white;
+            border-radius: 5px;
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.7); /* Fundo arredondado e com opacidade */
+        }
+
+        .gif img {
+            width: 60%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px; /* Imagem com bordas arredondadas */
+        }
+
+        h1, h2 {
+            color: #f1c40f;
+            margin-bottom: 20px;
+        }
+
+        .habilidades {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .habilidades li:hover {
+            background-color: #444;
+            transform: scale(1.03);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+        }
+
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Bruxo</h1>
+        <div class="gif">
+            <img src="bruxogeralt.webp" alt="Bruxo"> <br>  <br>
+        </div>
+
+        <h2>Habilidades de Ataque:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Lâmina Arcana:</span> O Bruxo invoca uma lâmina feita de pura energia mágica que pode ser utilizada para ataques rápidos e poderosos. A lâmina causa dano considerável e pode cortar através de armaduras e escudos. (Requer 9 de Inteligência, 7 de Força)</li>
+                <li><span>Explosão Arcana:</span> O Bruxo concentra uma grande quantidade de energia mágica em um único ponto e dispara uma explosão de magia pura, causando danos massivos em área e empurrando os inimigos para longe. (Requer 9 de Inteligência, 7 de Ego)</li>
+                <li><span>Troca de Atributos:</span> O Bruxo pode transferir atributos temporariamente entre ele e um aliado, concedendo mais força ao aliado para ataques físicos ou mais inteligência ao Bruxo para habilidades mágicas. (Requer 8 de Inteligência, 6 de Força)</li>
+                <li><span>Lâmina Sombria:</span> O Bruxo convoca uma lâmina negra, feita de energia das sombras, que pode ser usada em combate corpo a corpo. Esta lâmina causa dano elevado e tem a habilidade de drenar a vida do inimigo, restaurando uma parte da saúde do Bruxo. (Requer 10 de Inteligência, 8 de Força)</li>
+                <li><span>Raio Arcano:</span> O Bruxo dispara um raio mágico concentrado em linha reta, causando dano massivo ao inimigo atingido e, se acertar vários, causando um efeito de choque que enfraquece seus ataques temporariamente. (Requer 8 de Inteligência, 6 de Velocidade)</li>
+                <li><span>Vórtice de Energia:</span> O Bruxo cria um vórtice de energia mágica ao redor de si, puxando inimigos próximos e causando dano contínuo. Enquanto o vórtice estiver ativo, o Bruxo fica imune a ataques mágicos e recebe dano reduzido de ataques físicos. (Requer 10 de Inteligência, 7 de Ego)</li>
+                <li><span>Ritual de Maldição:</span> O Bruxo realiza um ritual que amaldiçoa um inimigo, reduzindo sua defesa e resistência enquanto aumenta o dano recebido. Durante a maldição, o inimigo também sofre dano contínuo ao longo do tempo. (Requer 7 de Inteligência, 6 de Ego)</li>
+                <li><span>Espada de Fogo:</span> O Bruxo invoca uma espada flamejante que inflige dano de fogo em inimigos atingidos. A espada causa danos contínuos por um tempo e pode ser arremessada para atingir alvos à distância. (Requer 8 de Inteligência, 6 de Força)</li>
+                <li><span>Chuva de Lâminas:</span> O Bruxo invoca várias lâminas mágicas que caem do céu, atingindo todos os inimigos em uma área ampla e causando dano massivo. Cada lâmina tem um efeito de sangramento que dura alguns turnos. (Requer 9 de Inteligência, 8 de Velocidade)</li>
+                <li><span>Desintegração de Mana:</span> O Bruxo cria uma onda de desintegração mágica que drena a mana dos inimigos, causando dano baseado na quantidade de mana perdida e debilitando as habilidades mágicas dos inimigos atingidos. (Requer 10 de Inteligência, 9 de Ego)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

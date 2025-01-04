@@ -1,0 +1,13 @@
+{
+    "raças": {
+      "Humano": "+5 EGO - O maior potencial para desperta",
+      "Gigante": "+5 Força - A maior força de batalha na terra.",
+      "Dragão": "Controla 1 dos 4 elementos da natureza (Fogo, Água, Vento, Terra).",
+      "Demônio": "Imunidade a Fogo e controla chamas de forma básica.",
+      "Elfo Negro": "Imunidade parcial a Magias.",
+      "Fada": "+5 Inteligência - Portal de Mana enorme.",
+      "Bruxo": "Se nivela com o oponente por 2 turnos após usar poções."
+    },
+    "ajuda": "Pergunte-me sobre as raças, perks ou como criar seu personagem. Eu posso te ajudar!"
+  }
+  

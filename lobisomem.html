@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobisomem - Crossoverso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2a47; /* Noite fria com toque de azul escuro */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: linear-gradient(135deg, #1e2a47 0%, #2c3e50 100%); /* Gradiente para um efeito de luar */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .raca-info {
+            text-align: center;
+            padding: 40px;
+            flex: 1;
+        }
+
+        .gif img {
+            width: 60%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #f1c40f;
+            margin-bottom: 20px;
+        }
+
+        .habilidades {
+            background-color: rgba(44, 62, 80, 0.8); /* Um fundo mais escuro para combinar com o tema noturno */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .habilidades ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .habilidades li {
+            background-color: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .habilidades li:hover {
+            background-color: #444;
+            transform: scale(1.03);
+        }
+
+        .habilidades li span {
+            color: #f39c12;
+        }
+
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gif img {
+                width: 80%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="racas.html">Raças</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="crie.html">Crie SEU PP</a>
+        <a href="gamepass.html">Gamepass</a>
+    </div>
+
+    <div class="raca-info">
+        <h1>Lobisomem</h1>
+        <div class="gif">
+            <img src="lobo.avif" alt="Lobisomem">
+        </div> <br>
+
+        <h2>Habilidades e Transformações:</h2>
+        <div class="habilidades">
+            <ul>
+                <li><span>Transformação Lupina:</span> O Lobisomem pode se transformar completamente em um lobo, ganhando força e velocidade aumentadas. A transformação também melhora a percepção e habilidades de caça. (Requer 7 de Força, 6 de Velocidade)</li>
+                <li><span>Garras Selvagens:</span> Suas garras são afiadas e podem cortar através de qualquer material, tornando-o um grande inimigo no combate corpo a corpo. (Requer 6 de Força, 5 de Velocidade)</li>
+                <li><span>Sentidos Aguçados:</span> Seus sentidos são muito mais aguçados que os de um ser humano comum, permitindo-lhe detectar presas a grandes distâncias ou localizar inimigos em uma batalha. (Requer 5 de Velocidade, 4 de Inteligência)</li>
+                <li><span>Uivo da Lua Cheia:</span> Ao uivar para a lua cheia, o Lobisomem pode invocar espíritos dos mortos ou chamar outros lobos para ajudá-lo. (Requer 8 de EGO, 7 de Inteligência)</li>
+                <li><span>Cura Rápida:</span> Sua habilidade regenerativa permite que o Lobisomem se recupere de ferimentos rapidamente, o que o torna difícil de derrotar em combate. (Requer 6 de Força, 6 de Inteligência)</li>
+                <li><span>Vigor Selvagem:</span> Ele aumenta a força e resistência física de seus aliados próximos, concedendo a eles uma vantagem significativa nas batalhas. (Requer 7 de Força, 8 de EGO)</li>
+                <li><span>Camuflagem Natural:</span> O Lobisomem pode se camuflar em qualquer ambiente natural, tornando-se invisível para os inimigos. (Requer 6 de Velocidade, 5 de Inteligência)</li>
+                <li><span>Fúria Selvagem:</span> Ao entrar em um estado de fúria, o Lobisomem ganha um aumento massivo de poder, mas perde o controle sobre suas ações por um tempo. (Requer 9 de Força, 8 de EGO)</li>
+                <li><span>Transformação Total:</span> O Lobisomem se transforma completamente em um ser híbrido entre homem e lobo, ganhando habilidades de ambas as formas. (Requer 10 de Força, 9 de EGO)</li>
+                <li><span>Rugido Assustador:</span> Ele pode soltar um rugido aterrorizante, que paralisa ou assusta inimigos próximos, diminuindo suas defesas temporariamente. (Requer 7 de Velocidade, 6 de EGO)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crossoverso RPG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
