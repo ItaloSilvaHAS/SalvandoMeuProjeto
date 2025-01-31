@@ -1,55 +1,53 @@
-/* Reset básico */
-    transition: transform 0.3s ease;
+/* Reset global */
 }
 
-.carousel-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
-}
-
-.carousel-item p {
-    color: #e0e0e0;
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-/* Rodapé */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #111;
     color: #e0e0e0;
-    border-top: 2px solid #b30000;
+    margin-top: 50px;
+    border-top: 2px solid #ff0000;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        text-align: center;
     }
 
     .navbar a {
-        margin: 10px 0;
-        font-size: 1rem;
+        padding: 12px 0;
     }
 
     .hamburger {
         display: block;
     }
 
-    .carousel {
-        flex-direction: column;
-        align-items: center;
+    .intro {
+        height: 350px;
     }
 
-    .carousel-item {
-        width: 100%;
-        max-width: 350px;
-        margin-bottom: 20px;
+    .intro-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .features h2 {
+        font-size: 2.3rem;
     }
 }
-
-
 
 
 /* ABA RAÇAS!!!! ACIMA ESTA O INDEX E ABAIXO AS RAÇAS
