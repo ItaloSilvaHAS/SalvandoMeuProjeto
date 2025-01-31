@@ -1,17 +1,120 @@
-/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Footer */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Fundo escuro para dar aquele toque "modo noturno" */
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Seção de introdução, com animação aplicada */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: linear-gradient(135deg, #ffcc00, #ff6600); /* Gradiente amarelo alaranjado */
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.intro-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideUp 1.5s ease-out;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    animation: slideUp 2s ease-out;
+}
+
+.highlight {
+    color: #ffcc00; /* Destaque amarelo */
+    font-weight: bold;
+}
+
+/* Seção de "Principais Atrativos", sem animação agora */
+.home {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.carousel-item p {
+    padding: 15px;
+    font-size: 1rem;
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #e0e0e0;
+    padding: 20px 0;
+    background-color: #333;
+    color: #f5f5f5;
     margin-top: 50px;
-    border-top: 2px solid #ff0000;
 }
 
-/* Animações */
+/* Animações para a introdução e animações para o slide-up */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -21,34 +124,232 @@ footer {
     }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    .navbar a {
-        padding: 12px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .intro {
-        height: 350px;
-    }
-
-    .intro-content h1 {
-        font-size: 2.8rem;
-    }
-
-    .features h2 {
-        font-size: 2.3rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+
+    .intro {
+        height: 300px;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+/* Seção de principais atrativos */
+.home {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features {
+    margin-top: 30px;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Animação de aumento */
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px); /* Dá um efeito de elevação */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra para dar profundidade */
+}
+
+.carousel-item p {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+}
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #222; /* Alterei para um tom mais escuro para contraste */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ffcc00; /* Borda amarela para um toque chamativo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombras para profundidade */
+}
+
+.navbar a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordas arredondadas para um toque moderno */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover nas abas */
+.navbar a:hover {
+    color: #fff;
+    background-color: #ff6600; /* Cor laranja suave para hover */
+    transform: scale(1.05); /* Leve aumento da aba ao passar o mouse */
+}
+
+/* Abas ativas */
+.navbar a.active {
+    background-color: #ffcc00; /* Amarelo para indicar aba ativa */
+    color: #333;
+    font-weight: bold; /* Negrito para dar mais ênfase na aba ativa */
+}
+
+/* Seção de introdução */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animações para introdução */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
 
 /* ABA RAÇAS!!!! ACIMA ESTA O INDEX E ABAIXO AS RAÇAS
 
